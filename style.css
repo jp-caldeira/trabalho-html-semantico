@@ -1,15 +1,74 @@
+/* :root {
+  color-scheme: dark light;
+} */
+
 body{
     margin:0;
     font-family:'Lato', sans-serif;
 }
 
 .div-1 {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
     text-align: center;
     
+}
+
+.page-content {
+    margin: 8vh 8vw 5vh 5vw;
+}
+
+.article-2 {
+    margin: 5vh 8vw;
 }
 
 h1.title-1 {
     font-size: 45px;
     font-weight: 200;
 }
+
+h2.title-2 {
+    font-weight: lighter;
+    font-style: italic;
+}
+
+aside {
+    width: 20vw;
+    float: right;
+    color: hsl(0, 0%, 55%);
+    font-style: oblique;
+    padding: 0.5rem;
+}
+
+figure {
+    display: flex;
+    flex-flow: column;
+    padding: 2vw;
+    margin: auto;
+    max-width: 60vw;
+    
+}
+
+figcaption {
+    padding: .3rem;
+    font-style: italic;
+    font-weight: lighter;
+    text-align: center;
+    background-color: hsl(0, 0%, 0%);
+    color:hsl(0, 0%, 75%)
+}
+
+.foot-1{
+    background-color: hsl(0, 0%, 20%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 200;
+    text-align: center;
+    display: flex;
+    padding: 1.5rem;
+    justify-content: center;
+}
+
+/* .head-1 {
+
+} */
