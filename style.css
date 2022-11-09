@@ -1,10 +1,135 @@
-/* :root {
-  color-scheme: dark light;
-} */
+/* cria variáveis css */
+:root {
+    --cor-fundo: hsl(0, 76%, 33%);
+    /* cria a variável --cor-fundo com a cor azul escuro */
+    --cor-hover: hsl(0, 0%, 50%);
+    /*  cria a variável --cor-hover com a cor cinza*/
+    --cor-link: hsl(0, 0%, 100%);
+    /* cria a variável --cor-link com a cor branca*/
+    /* para criar uma var em css, --nome_da_var:valor; */
+    --cor-fundo-d1: grey;
+    --cor-fundo-d2: yellow;
+    --cor-fundo-d3: orangered;
+    --largura-div: 200px;
+    --img1: url('https://source.unsplash.com/3mWxKnqET3E');
+    --img2: url('https://source.unsplash.com/sIxd5FR9Ugo');
+    --img3: url('https://blog.ead.unipar.br/wp-content/uploads/2021/04/inovacao-e-tecnologia.jpg');
+    --img4: url('https://source.unsplash.com/V1NVvXmO_dk');
+}
 
-body{
-    margin:0;
-    font-family:'Lato', sans-serif;
+
+/* -- reset de página */
+* {
+    margin: 0;
+    /* zera as margens */
+    padding: 0;
+    /* zera os espaçamentos internos */
+    box-sizing: border-box;
+    /* calcula a largura e altura dos elementos sem levar em conta, padding e border */
+    font-family: Arial, Helvetica, sans-serif;
+    /* família de fontes Arial, Helvetica, sans-serif*/
+
+}
+
+/* formata a tag header */
+header {
+    height: 90px;
+    /* altura de 60px */
+    background-color: var(--cor-fundo);
+    /* aplica o valor da variável --cor-fundo para a cor de fundo */
+    display: flex;
+    /* permite colocar os elementos um ao lado do outro, no caso h2 e nav  */
+    align-items: center;
+    /* alinhamento na vertical centralizado */
+    justify-content: space-between;
+    /* coloca os elementos nos cantos */
+    padding: 0px 30px;
+    /* espaçamento interno para cima e baixo 0px, direito e esquerda 30px (para o logo e o menu não ficar colado nos cantos) */
+    color: hsl(0, 0%, 100%);
+}
+
+/* formata todos os links, tag a */
+a {
+    text-decoration: none;
+    /* retira o sublinhado dos links, tag a */
+    color: var(--cor-link);
+    /* aplica o valor da variável --cor-link para a cor do texto */
+}
+
+/* formata a tag ul que está dentro de nav que está dentro de header */
+header nav ul {
+    list-style: none;
+    /* retira os marcadores das listas */
+    display: flex;
+    /* permite colocar os elementos um ao lado do outro, no caso as tags li */
+}
+
+/* formata a tag a que está dentro de li que está dentro de ul que está dentro de nav que está dentro de header */
+header nav ul li a {
+    transition: 0.5s;
+    /* cria uma transição de 0.5 segundos */
+    padding: 20px 15px;
+    /* espaçamento interno para cima e baixo 20px, direito e esquerda 15px */
+}
+
+/* formata ao passar o mouse sobre a tag a que está dentro de li que está dentro de ul que está dentro de nav que está dentro de header */
+header nav ul li a:hover {
+    background-color: var(--cor-hover);
+    /* aplica o valor da variável --cor-hover para a cor de fundo  */
+}
+
+.container {
+    width: 100%;
+    height: 80vh;
+    border: 1px solid;
+    display: auto;
+    justify-content: center;
+    /* horizontal - eixo principal */
+    /* valores para o justify-content: center|start|end|space-between|space-around|space-evenly */
+    align-items: center;
+    /* vertical */
+    /* valores para o algin-itens start|center|end */
+    gap: 5px;
+    flex-wrap: wrap;
+    /* background: linear-gradient(to right, rgb(231, 173, 65)  ,rgb(185, 118, 248)); */
+    background-image: var(--img3);
+    background-size: cover;
+    background-position: 50% 50%;
+
+
+}
+
+.d {
+    width: var(--largura-div);
+    height: 50px;
+    border: 1px solid blue;
+
+}
+
+.d1 {
+    background-color: var(--cor-fundo-d1);
+}
+
+.d2 {
+    background-color: var(--cor-fundo-d2);
+}
+
+.d3 {
+    background-color: var(--cor-fundo-d3);
+    transition: 0.5s;
+}
+
+.d3:hover {
+    --cor-fundo-d3: hsl(120, 100%, 50%);
+    width: 150px;
+    border-radius: 10px;
+
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+
 }
 
 .div-1 {
@@ -12,7 +137,8 @@ body{
     margin-right: auto;
     margin-top: 5vh;
     text-align: center;
-    
+
+
 }
 
 .page-content {
@@ -26,6 +152,10 @@ body{
 h1.title-1 {
     font-size: 45px;
     font-weight: 200;
+    text-align: center;
+    margin: 20px;
+
+
 }
 
 h2.title-2 {
@@ -47,19 +177,19 @@ figure {
     padding: 2vw;
     margin: auto;
     max-width: 60vw;
-    
+
 }
 
 figcaption {
     padding: .3rem;
-    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: lighter;
     text-align: center;
     background-color: hsl(0, 0%, 0%);
-    color:hsl(0, 0%, 75%)
+    color: hsl(0, 0%, 75%)
 }
 
-.foot-1{
+.foot-1 {
     background-color: hsl(0, 0%, 20%);
     color: hsl(0, 0%, 100%);
     font-weight: 200;
@@ -67,8 +197,60 @@ figcaption {
     display: flex;
     padding: 1.5rem;
     justify-content: center;
+
 }
 
-/* .head-1 {
 
-} */
+
+.nomes {
+    text-align: center;
+
+    font-weight: bold;
+
+
+}
+
+.membros {
+    font-size: 40px;
+    font-style: italic;
+    text-align: center;
+    color: black;
+}
+
+.fonte {
+    font-size: 15px;
+    color: hsl(0, 0%, 0%);
+    background-color: whitesmoke;
+
+
+}
+
+.test1 {
+
+    position: absolute;
+    width: 100px;
+    left: -100px;
+    opacity: 0;
+    transition: all;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    text-align: left;
+}
+
+.test1:hover a span {
+    opacity: 1;
+    left: 0px;
+}
+
+
+/*
+.teste{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 70px;
+    justify-content: space-evenly;
+
+
+    
+}*/
